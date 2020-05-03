@@ -14,6 +14,6 @@ export default class Grammar {
   }
 
   firstRigthSide(Prod) {
-    return Prod.rigthSide[0];
+    return Prod.getRigthSide()[0];
   }
 }

@@ -1,5 +1,5 @@
 export default class Prod {
-  constructor(prodNumber, leftSide, [rigthSide]) {
+  constructor(prodNumber, leftSide, rigthSide) {
     this.prodNumber = prodNumber;
     this.leftSide = leftSide;
     this.rigthSide = rigthSide;
@@ -25,7 +25,7 @@ export default class Prod {
     return this.rigthSide;
   }
 
-  setRigthSide([rigthSide]) {
-    this.rigthSide = [rigthSide];
+  setRigthSide(rigthSide) {
+    this.rigthSide = rigthSide;
   }
 }
