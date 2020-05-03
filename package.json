@@ -1,0 +1,19 @@
+{
+  "name": "theory-practice-2",
+  "version": "1.0.0",
+  "description": "Segunda práctica de teoría de lenguajes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slqpez/theory-practice-2.git"
+  },
+  "author": "Santiago López - Manuel Calle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slqpez/theory-practice-2/issues"
+  },
+  "homepage": "https://github.com/slqpez/theory-practice-2#readme"
+}
