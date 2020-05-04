@@ -4,16 +4,24 @@ import Prod from "../../productions/Prod.js";
 export function leftSideEquals(array, Grammar) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length; j++) {
-      const firstLeftSide = array[i].getLeftSide();
-      const auxLeftSide = array[j].getLeftSide();
+      const firstLeftSide = Grammar.getValueLeftSide(array[i]); //TODO Solo reconoce por parejas.
+      const auxLeftSide = Grammar.getValueLeftSide(array[j]);
       if (i !== j) {
         if (firstLeftSide === auxLeftSide) {
           if (
-            Grammar.firstRigthSide(array[i]) !==
-            Grammar.firstRigthSide(array[j])
+            Grammar.firstRigthSideValue(array[i]) !==
+            Grammar.firstRigthSideValue(array[j])
           )
             continue;
-          else return false;
+          else {
+            console.log(
+              `No es una gramática S, ya que en las producciones ${i +
+                1} y ${j +
+                1} hay símbolos iguales en el lado izquierdo, pero sus lados derechos empiezan con igual terminal(T).`
+            );
+
+            return false;
+          }
         } else continue;
       } else continue;
     }
